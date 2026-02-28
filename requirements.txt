@@ -1,0 +1,6 @@
+streamlit
+opencv-python
+pytesseract
+pillow
+pdf2image
+google-genai
