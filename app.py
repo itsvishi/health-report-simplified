@@ -1,5 +1,5 @@
 import streamlit as st
-import sys
+import os
 import cv2
 import pytesseract
 import numpy as np
@@ -18,7 +18,7 @@ from google.genai import types
 # 2. Tesseract OCR MUST be installed on your system.
 #    - Windows: https://github.com/UB-Mannheim/tesseract/wiki
 #    - You may need to specify the path below if it's not in your system PATH:
-if sys.platform.startswith('win'):
+if os.name == 'nt':
     pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 # 3. Poppler is required for `pdf2image` on Windows/Mac.
 #    - Windows: https://github.com/oschwartz10612/poppler-windows/releases/
